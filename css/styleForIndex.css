@@ -1,0 +1,184 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    /*background: url('https://ww1.sinaimg.cn/large/0060lm7Tgy1fehnthhwvbj31hc0u0kjl.jpg') no-repeat fixed bottom center*/
+}
+
+.box{
+    width: 100%;
+    height: 280px;
+    margin: 100px 20% 0px;
+}
+
+.box .link{
+    width: 205px;
+    height: 280px;
+    margin: 0 20px;
+    float: left;
+    position: relative;
+}
+
+.link .icon{
+    display: inline-block;
+    width: 100%;
+    height: 190px;
+    transition:0.3s linear;
+    -o-transition:0.3s linear;
+    -ms-transition:0.3s linear;
+    -moz-transition:0.3s linear;
+    -webkit-transition:0.3s linear;
+}
+
+.link-miss .icon{
+    background: url("../mission.png") no-repeat;
+}
+
+.link-play .icon{
+    background: url("../play.png") no-repeat;
+}
+
+.link-touch .icon{
+    background: url("../touch.png") no-repeat;
+}
+
+.link .icon:hover{
+    cursor: pointer;
+    transform: rotate(360deg) scale(1.2);
+    -o-transform: rotate(360deg) scale(1.2);
+    -ms-transform: rotate(360deg) scale(1.2);
+    -moz-transform: rotate(360deg) scale(1.2);
+    -webkit-transform: rotate(360deg) scale(1.2);
+}
+
+.buttom{
+    display: block;
+    width: 180px;
+    height: 50px;
+    text-decoration: none;
+    line-height: 50px;
+    color: #2dcb70;
+    font-family: "微软雅黑",Arial,Helvetica,sans-serif;
+    font-weight: bolder;
+    border: 2px solid rgba(255,255,255,0.6);
+    padding-left: 20px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    background: url("../image/allow.png") no-repeat 130px center;
+    position: relative;
+    transition:0.4s ease;
+    -o-transition:0.4s ease;
+    -ms-transition:0.4s ease;
+    -moz-transition:0.4s ease;
+    -webkit-transition:0.4s ease;
+}
+
+.buttom:hover{
+    border: 2px solid rgba(255,255,255,1);
+    background-position: 140px center;
+}
+
+.buttom .line{
+    display: block;
+    position: absolute;
+    background: none;
+    transition:0.4s ease;
+    -o-transition:0.4s ease;
+    -ms-transition:0.4s ease;
+    -moz-transition:0.4s ease;
+    -webkit-transition:0.4s ease;
+}
+
+.buttom:hover .line{
+    background: #2dcb70;
+}
+
+.buttom .line-top{
+    height: 2px;
+    width: 0px;
+    left: -110%;
+    top: -2px;
+}
+
+.buttom:hover .line-top{
+    width: 100%;
+    left: -2px;
+}
+
+/*buttom*/
+.buttom .line-buttom{
+    width: 0px;
+    height: 2px;
+    right: -110%;
+    bottom: -2px;
+}
+
+.buttom:hover .line-buttom{
+    width: 100%;
+    right: -2px;
+}
+/*left*/
+.buttom .line-left{
+    width: 2px;
+    height: 0;
+    left: -2px;
+    bottom: -130%;
+}
+
+.buttom:hover .line-left{
+    height: 100%;
+    bottom: -2px;
+}
+
+/*right*/
+.buttom .line-right{
+    width: 2px;
+    height: 0;
+    right: -2px;
+    top: -130%;
+}
+
+.buttom:hover .line-right{
+    height: 100%;
+    top: -2px;
+}
+
+.box .tip{
+    position: absolute;
+    padding: 0 14px;
+    height: 35px;
+    line-height: 35px;
+    background: #2dcb70;
+    color: #ffffff;
+    top: 160px;
+    font-size: 16px;
+    font-weight: normal;
+    text-transform: none;
+    margin: 0 auto;
+    border-radius: 3px;
+    opacity: 0;
+    /*opacity 属性设置元素的不透明级别*/
+}
+
+.tip em{
+    font-style: normal;
+    color: #000;
+}
+
+.tip span{
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 50%;
+    margin-left: -3px;
+    bottom: -13px;
+    /*这段的意思是：小三角是根据tip盒子来的，本来会出现在tip的内部，如果
+    bottom为负值，则会在tip的下面出现，就显现出来了
+    注意：宽和高为0，定位绝对，父类定位相对*/
+    overflow: hidden;
+    border: 7px solid transparent;
+    border-top-color: #2dcb70;/*bottom 三角向上指，top则向下指*/
+}
